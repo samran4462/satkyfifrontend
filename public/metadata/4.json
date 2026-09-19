@@ -1,0 +1,11 @@
+{
+  "name": "Tier 4 (Platinum)",
+  "description": "Platinum tier staking NFT for NexusStake providing maximum rewards.",
+  "image": "http://localhost:5173/assets/tiers/4.jpg",
+  "attributes": [
+    {
+      "trait_type": "Tier",
+      "value": "Platinum"
+    }
+  ]
+}

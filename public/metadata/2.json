@@ -1,0 +1,11 @@
+{
+  "name": "Tier 2 (Silver)",
+  "description": "Silver tier staking NFT for NexusStake providing enhanced rewards.",
+  "image": "http://localhost:5173/assets/tiers/2.jpg",
+  "attributes": [
+    {
+      "trait_type": "Tier",
+      "value": "Silver"
+    }
+  ]
+}

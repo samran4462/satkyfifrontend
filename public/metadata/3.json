@@ -1,0 +1,11 @@
+{
+  "name": "Tier 3 (Gold)",
+  "description": "Gold tier staking NFT for NexusStake providing superior rewards.",
+  "image": "http://localhost:5173/assets/tiers/3.jpg",
+  "attributes": [
+    {
+      "trait_type": "Tier",
+      "value": "Gold"
+    }
+  ]
+}
