@@ -52,13 +52,13 @@ export function Dashboard() {
       <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-12 gap-4">
         <div>
           <h1 className="text-3xl font-extrabold text-white">My Holdings</h1>
-          <p className="text-foreground/70 mt-2">Manage and stake your NexusStake NFTs</p>
+          <p className="text-foreground/70 mt-2">Manage and stake your Stakyfi NFTs</p>
         </div>
         
         <button 
           onClick={() => setIsStakeModalOpen(true)}
           disabled={!hasAnyBalance}
-          className="px-6 py-3 rounded-xl bg-electric text-white font-bold shadow-[0_0_20px_rgba(124,58,237,0.3)] transition-all hover:bg-bright-violet disabled:opacity-50 disabled:shadow-none disabled:hover:bg-electric"
+          className="px-6 py-3 rounded-xl bg-electric text-black font-bold shadow-[0_0_20px_rgba(234,179,8,0.3)] transition-all hover:bg-bright-violet disabled:opacity-50 disabled:shadow-none disabled:hover:bg-electric"
         >
           Batch Stake NFTs
         </button>
@@ -85,7 +85,7 @@ export function Dashboard() {
                 key={tier.id}
                 className={`p-6 rounded-2xl border transition-all ${
                   hasBalance 
-                    ? 'bg-surface-elevated border-electric/30 shadow-[0_0_15px_rgba(124,58,237,0.1)]' 
+                    ? 'bg-surface-elevated border-electric/30 shadow-[0_0_15px_rgba(234,179,8,0.1)]' 
                     : 'bg-surface border-surface-elevated opacity-60'
                 }`}
               >
@@ -113,7 +113,7 @@ export function Dashboard() {
                   <button 
                     onClick={() => setIsStakeModalOpen(true)}
                     disabled={!hasBalance}
-                    className="px-4 py-2 rounded-lg bg-electric text-white text-sm font-bold shadow-[0_0_15px_rgba(124,58,237,0.3)] transition-all hover:bg-bright-violet disabled:opacity-50 disabled:shadow-none disabled:hover:bg-electric"
+                    className="px-4 py-2 rounded-lg bg-electric text-black text-sm font-bold shadow-[0_0_15px_rgba(234,179,8,0.3)] transition-all hover:bg-bright-violet disabled:opacity-50 disabled:shadow-none disabled:hover:bg-electric"
                   >
                     Stake
                   </button>

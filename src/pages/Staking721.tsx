@@ -6,7 +6,7 @@ import NFTStaking721Artifact from '../config/abis/NFTStaking721.json';
 
 const STAKING_721_ADDRESS = '0x1aa145d9D5AfBf38a6D328F43F40665a2392D107' as `0x${string}`;
 const ELN_NFT_ADDRESS     = '0xCe56eceA6BBda665255a6E5f497168F22E131cFF' as `0x${string}`;
-const STAKY_TOKEN_ADDRESS = '0xcD6e413F8Dec4cd8919412E11B1db905bE89fB61' as `0x${string}`;
+const STAKY_TOKEN_ADDRESS = '0xe74773D89650346293e09f607A8cCfcD2f4c4eab' as `0x${string}`;
 const STAKING_721_ABI     = NFTStaking721Artifact.abi;
 
 const ERC20_ABI = [
@@ -218,7 +218,7 @@ export function Staking721() {
         </div>
 
         {/* STAKY Balance Display */}
-        <div className="flex items-center gap-3 px-5 py-3 rounded-xl bg-surface-elevated border border-surface-elevated shadow-[0_0_15px_rgba(124,58,237,0.1)]">
+        <div className="flex items-center gap-3 px-5 py-3 rounded-xl bg-surface-elevated border border-surface-elevated shadow-[0_0_15px_rgba(234,179,8,0.1)]">
           <div className="w-10 h-10 rounded-full bg-electric/20 flex items-center justify-center text-electric">
             <Coins className="w-5 h-5" />
           </div>
@@ -285,7 +285,7 @@ export function Staking721() {
                 <button
                   onClick={handleStake}
                   disabled={!stakeTokenId || isTxPending || nftBalance === 0}
-                  className="w-full py-3 bg-electric hover:bg-bright-violet text-white font-bold rounded-xl shadow-[0_0_20px_rgba(124,58,237,0.3)] transition-all disabled:opacity-50 disabled:shadow-none flex items-center justify-center gap-2">
+                  className="w-full py-3 bg-electric hover:bg-bright-violet text-black font-bold rounded-xl shadow-[0_0_20px_rgba(234,179,8,0.3)] transition-all disabled:opacity-50 disabled:shadow-none flex items-center justify-center gap-2">
                   {isTxPending ? <><Loader2 className="w-5 h-5 animate-spin" /> Staking...</> : 'Stake NFT'}
                 </button>
               </div>

@@ -16,7 +16,7 @@ const connectors = connectorsForWallets(
     },
   ],
   {
-    appName: 'NexusStake',
+    appName: 'Stakyfi',
     projectId: 'YOUR_PROJECT_ID', // WalletConnect not required for MetaMask
   }
 );

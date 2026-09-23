@@ -2,29 +2,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
 @theme {
-  /* Background layers — mid-dark navy, clearly visible */
-  --color-obsidian:        #0E1A2E;
-  --color-navy:            #13233D;
-  --color-surface:         #172947;
-  --color-surface-elevated:#1D3258;
+  /* Background layers — black */
+  --color-obsidian:        #000000;
+  --color-navy:            #0A0A0A;
+  --color-surface:         #141414;
+  --color-surface-elevated:#1F1F1F;
 
-  /* Brand accents — unchanged */
-  --color-electric:        #7C3AED;
-  --color-bright-violet:   #8B5CF6;
-  --color-cyan:            #22D3EE;
+  /* Brand accents — yellow */
+  --color-electric:        #EAB308;
+  --color-bright-violet:   #FACC15;
+  --color-cyan:            #FDE047;
 
-  /* Typography */
+  /* Typography — white */
   --color-background:      var(--color-obsidian);
-  --color-foreground:      #E8F0FE;
+  --color-foreground:      #FFFFFF;
 }
 
 @layer base {
   html, body {
     background-color: var(--color-background);
-    /* Subtle violet glow top-centre, cyan shimmer bottom-right */
+    /* Subtle yellow glow top-centre, white shimmer bottom-right */
     background-image:
-      radial-gradient(ellipse 70% 45% at 50% -5%,  rgba(124,58,237,0.16) 0%, transparent 65%),
-      radial-gradient(ellipse 40% 30% at 95% 100%,  rgba(34,211,238,0.07) 0%, transparent 60%);
+      radial-gradient(ellipse 70% 45% at 50% -5%,  rgba(234,179,8,0.15) 0%, transparent 65%),
+      radial-gradient(ellipse 40% 30% at 95% 100%,  rgba(255,255,255,0.05) 0%, transparent 60%);
     background-attachment: fixed;
     color:            var(--color-foreground);
     margin:           0;
@@ -33,5 +33,5 @@
   }
 
   /* Keep all text-white references readable on the new bg */
-  .text-white { color: #F1F5FF !important; }
+  .text-white { color: #FFFFFF !important; }
 }

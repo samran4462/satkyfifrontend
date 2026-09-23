@@ -312,7 +312,7 @@ export function Admin() {
                   <button 
                     onClick={handlePropose}
                     disabled={isTxPending}
-                    className="w-full mt-4 px-4 py-3 bg-electric hover:bg-bright-violet text-white font-bold rounded-xl transition-all shadow-[0_0_15px_rgba(124,58,237,0.3)] disabled:opacity-50 disabled:shadow-none flex items-center justify-center gap-2"
+                    className="w-full mt-4 px-4 py-3 bg-electric hover:bg-bright-violet text-black font-bold rounded-xl transition-all shadow-[0_0_15px_rgba(234,179,8,0.3)] disabled:opacity-50 disabled:shadow-none flex items-center justify-center gap-2"
                   >
                     {isTxPending ? <><Loader2 className="w-5 h-5 animate-spin" /> Submitting...</> : 'Submit Proposal'}
                   </button>

@@ -21,10 +21,7 @@ export function Home() {
           </div>
           
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-white leading-tight">
-            Unlock the Power of <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-electric to-cyan">
-              NFT Staking
-            </span>
+            Put Your <span className="text-electric">NFTs</span> to Work
           </h1>
           
           <p className="text-lg md:text-xl text-foreground/70 max-w-2xl mx-auto">
@@ -32,7 +29,7 @@ export function Home() {
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-            <Link to="/dashboard" className="w-full sm:w-auto px-8 py-4 rounded-xl bg-electric text-white font-bold text-lg shadow-[0_0_30px_rgba(124,58,237,0.3)] transition-all hover:bg-bright-violet hover:shadow-[0_0_40px_rgba(139,92,246,0.5)] flex items-center justify-center gap-2">
+            <Link to="/dashboard" className="w-full sm:w-auto px-8 py-4 rounded-xl bg-electric text-black font-bold text-lg shadow-[0_0_30px_rgba(234,179,8,0.3)] transition-all hover:bg-bright-violet hover:shadow-[0_0_40px_rgba(234,179,8,0.5)] flex items-center justify-center gap-2">
               Start Staking <ArrowRight className="w-5 h-5" />
             </Link>
             <button className="w-full sm:w-auto px-8 py-4 rounded-xl bg-surface-elevated text-white font-bold text-lg border border-surface transition-all hover:bg-navy flex items-center justify-center gap-2">

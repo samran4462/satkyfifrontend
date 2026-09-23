@@ -11,7 +11,7 @@ const TIER_NAMES: Record<number, string> = {
   4: 'Tier 4 (Platinum)',
 };
 
-const STAKY_TOKEN_ADDRESS = '0xcD6e413F8Dec4cd8919412E11B1db905bE89fB61' as `0x${string}`;
+const STAKY_TOKEN_ADDRESS = '0xe74773D89650346293e09f607A8cCfcD2f4c4eab' as `0x${string}`;
 const ERC20_ABI = [
   { name: 'balanceOf', type: 'function', stateMutability: 'view', inputs: [{ name: 'account', type: 'address' }], outputs: [{ type: 'uint256' }] }
 ] as const;
@@ -209,7 +209,7 @@ export function Rewards() {
         
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
           {/* STAKY Balance Display */}
-          <div className="flex items-center gap-3 px-5 py-2.5 rounded-xl bg-surface-elevated border border-surface-elevated shadow-[0_0_15px_rgba(124,58,237,0.1)]">
+          <div className="flex items-center gap-3 px-5 py-2.5 rounded-xl bg-surface-elevated border border-surface-elevated shadow-[0_0_15px_rgba(234,179,8,0.1)]">
             <div className="w-8 h-8 rounded-full bg-electric/20 flex items-center justify-center text-electric">
               <Coins className="w-4 h-4" />
             </div>
@@ -224,7 +224,7 @@ export function Rewards() {
           <button 
             onClick={handleClaimAll}
             disabled={totalPendingRewards === 0n || isTxPending || isLoading}
-            className="px-6 py-3 rounded-xl bg-electric text-white font-bold transition-all hover:bg-bright-violet disabled:opacity-50 disabled:hover:bg-electric shadow-[0_0_20px_rgba(124,58,237,0.3)] disabled:shadow-none flex items-center gap-2 h-[52px]"
+            className="px-6 py-3 rounded-xl bg-electric text-black font-bold transition-all hover:bg-bright-violet disabled:opacity-50 disabled:hover:bg-electric shadow-[0_0_20px_rgba(234,179,8,0.3)] disabled:shadow-none flex items-center gap-2 h-[52px]"
           >
             {isTxPending ? <><Loader2 className="w-5 h-5 animate-spin" /> Claiming...</> : 'Claim All Rewards'}
           </button>
@@ -338,7 +338,7 @@ export function Rewards() {
                       </div>
                     </div>
                     
-                    <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-cyan/10 text-cyan border border-cyan/20 text-xs font-bold shadow-[0_0_10px_rgba(34,211,238,0.1)]">
+                    <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-cyan/10 text-cyan border border-cyan/20 text-xs font-bold shadow-[0_0_10px_rgba(234,179,8,0.1)]">
                       <Star className="w-3.5 h-3.5" /> {(pos.multiplierBps / 10000).toFixed(2)}x Multiplier
                     </div>
                   </div>
@@ -355,7 +355,7 @@ export function Rewards() {
                   <button 
                     onClick={() => handleClaimSingle(pos.positionId)}
                     disabled={pos.pendingRewards === 0n || isTxPending}
-                    className="px-5 py-2.5 rounded-lg bg-surface border border-surface-elevated text-white text-sm font-bold transition-all hover:bg-cyan hover:text-navy hover:border-cyan shadow-sm hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] disabled:opacity-50 disabled:hover:bg-surface disabled:hover:text-white disabled:hover:border-surface-elevated disabled:shadow-none"
+                    className="px-5 py-2.5 rounded-lg bg-surface border border-surface-elevated text-white text-sm font-bold transition-all hover:bg-cyan hover:text-navy hover:border-cyan shadow-sm hover:shadow-[0_0_15px_rgba(234,179,8,0.3)] disabled:opacity-50 disabled:hover:bg-surface disabled:hover:text-white disabled:hover:border-surface-elevated disabled:shadow-none"
                   >
                     Claim Rewards
                   </button>

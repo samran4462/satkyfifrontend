@@ -9,11 +9,11 @@ export function Navbar() {
         <div className="flex h-16 items-center justify-between">
           
           <Link to="/" className="flex items-center gap-2">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-electric/20 text-electric shadow-[0_0_15px_rgba(124,58,237,0.5)]">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-electric/20 text-electric shadow-[0_0_15px_rgba(234,179,8,0.5)]">
               <Layers className="h-6 w-6" />
             </div>
             <span className="text-xl font-bold tracking-tight text-white">
-              Nexus<span className="text-cyan">Stake</span>
+              Staky<span className="text-cyan">fi</span>
             </span>
           </Link>
 

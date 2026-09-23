@@ -289,7 +289,7 @@ export function MyStaking() {
                   
                   <button 
                     onClick={() => setUnstakePositions([pos])}
-                    className="px-5 py-2.5 rounded-lg bg-surface border border-surface-elevated text-white text-sm font-bold transition-all hover:bg-electric hover:border-electric shadow-sm hover:shadow-[0_0_15px_rgba(124,58,237,0.3)]"
+                    className="px-5 py-2.5 rounded-lg bg-surface border border-surface-elevated text-white text-sm font-bold transition-all hover:bg-electric hover:text-black hover:border-electric shadow-sm hover:shadow-[0_0_15px_rgba(234,179,8,0.3)]"
                   >
                     Unstake
                   </button>

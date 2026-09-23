@@ -43,7 +43,7 @@ export function Mint1155() {
         <div className="text-center p-10 bg-surface rounded-2xl max-w-md">
           <Sparkles className="w-16 h-16 text-foreground/50 mx-auto mb-4" />
           <h2 className="text-2xl font-bold text-white mb-2">Connect Wallet</h2>
-          <p className="text-foreground/70">Connect your wallet to mint NexusStake NFTs.</p>
+          <p className="text-foreground/70">Connect your wallet to mint Stakyfi NFTs.</p>
         </div>
       </div>
     );
@@ -52,9 +52,9 @@ export function Mint1155() {
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-extrabold text-white mb-4">Mint NexusStake NFTs</h1>
+        <h1 className="text-4xl font-extrabold text-white mb-4">Mint Stakyfi NFTs</h1>
         <p className="text-foreground/70 text-lg max-w-2xl mx-auto">
-          Mint your Tier 1-4 NexusStake NFTs to start earning rewards. Higher tiers yield higher staking multipliers!
+          Mint your Tier 1-4 Stakyfi NFTs to start earning rewards. Higher tiers yield higher staking multipliers!
         </p>
       </div>
 
