@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useAccount, useWriteContract, useWaitForTransactionReceipt } from 'wagmi';
-import { Loader2, Sparkles, CheckCircle2, AlertCircle } from 'lucide-react';
+import { Sparkles, CheckCircle2, AlertCircle } from 'lucide-react';
 import { PUBLIC_MINTER_ADDRESS, PUBLIC_MINTER_ABI } from '../config/contracts';
 import { TierCard } from '../components/minting/TierCard';
 

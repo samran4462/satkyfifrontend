@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Sphere, MeshDistortMaterial } from '@react-three/drei';
 import { motion } from 'framer-motion';
@@ -7,7 +7,7 @@ import { Loader2 } from 'lucide-react';
 function EnergyCore({ isHovered, color }: { isHovered: boolean, color: string }) {
   const meshRef = useRef<any>(null);
 
-  useFrame((state, delta) => {
+  useFrame((_, delta) => {
     if (meshRef.current) {
       meshRef.current.rotation.x += isHovered ? delta * 2 : delta * 0.5;
       meshRef.current.rotation.y += isHovered ? delta * 2 : delta * 0.5;
