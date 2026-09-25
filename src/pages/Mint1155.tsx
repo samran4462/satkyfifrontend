@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useAccount, useWriteContract, useWaitForTransactionReceipt } from 'wagmi';
 import { Loader2, Sparkles, CheckCircle2, AlertCircle } from 'lucide-react';
 import { PUBLIC_MINTER_ADDRESS, PUBLIC_MINTER_ABI } from '../config/contracts';
+import { TierCard } from '../components/minting/TierCard';
 
 const TIERS = [
   { id: 1, name: 'Bronze Tier', color: 'text-amber-600', bg: 'bg-amber-600/10', border: 'border-amber-600/30' },
@@ -74,27 +75,13 @@ export function Mint1155() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
         {TIERS.map((tier) => (
-          <div key={tier.id} className={`p-6 rounded-3xl border ${tier.border} ${tier.bg} backdrop-blur-sm flex flex-col items-center justify-between text-center transition-transform hover:-translate-y-1`}>
-            <div>
-              <div className="w-32 h-32 rounded-2xl mb-6 overflow-hidden border border-white/10 mx-auto shadow-2xl">
-                <img src={`/assets/tiers/${tier.id}.jpg`} alt={tier.name} className="w-full h-full object-cover" />
-              </div>
-              <h3 className={`text-xl font-extrabold mb-2 ${tier.color}`}>{tier.name}</h3>
-              <p className="text-sm text-foreground/70 mb-6">Free Mint (Limit 1 per tx)</p>
-            </div>
-
-            <button
-              onClick={() => handleMint(tier.id)}
-              disabled={isTxPending}
-              className={`w-full py-3 rounded-xl font-bold transition-all text-white bg-surface-elevated hover:bg-white/10 border border-white/10 disabled:opacity-50 flex items-center justify-center gap-2`}
-            >
-              {isTxPending && selectedTier === tier.id ? (
-                <><Loader2 className="w-5 h-5 animate-spin" /> Minting...</>
-              ) : (
-                'Mint Now'
-              )}
-            </button>
-          </div>
+          <TierCard
+            key={tier.id}
+            tier={tier}
+            onMint={handleMint}
+            isPending={isTxPending}
+            isSelected={selectedTier === tier.id}
+          />
         ))}
       </div>
     </div>

@@ -11,7 +11,7 @@ const TIER_NAMES: Record<number, string> = {
   4: 'Tier 4 (Platinum)',
 };
 
-const STAKY_TOKEN_ADDRESS = '0xe74773D89650346293e09f607A8cCfcD2f4c4eab' as `0x${string}`;
+const AURA_TOKEN_ADDRESS = '0x77D4Dd6149733845B0559f09fa798e07215d760C' as `0x${string}`;
 const ERC20_ABI = [
   { name: 'balanceOf', type: 'function', stateMutability: 'view', inputs: [{ name: 'account', type: 'address' }], outputs: [{ type: 'uint256' }] }
 ] as const;
@@ -33,9 +33,9 @@ export function Rewards() {
   const availablePoolBalance = globalData?.[0]?.result as bigint || 0n;
   const globalTotalClaimed = globalData?.[1]?.result as bigint || 0n;
 
-  // 1b. Fetch User STAKY Balance
+  // 1b. Fetch User AURA Balance
   const { data: stakyData, refetch: refetchStaky } = useReadContract({
-    address: STAKY_TOKEN_ADDRESS,
+    address: AURA_TOKEN_ADDRESS,
     abi: ERC20_ABI,
     functionName: 'balanceOf',
     args: [address as `0x${string}`],
@@ -193,7 +193,7 @@ export function Rewards() {
             <Coins className="w-8 h-8" />
           </div>
           <h2 className="text-2xl font-bold text-white">Wallet Not Connected</h2>
-          <p className="text-foreground/70">Connect your wallet to access your Rewards Dashboard and claim your STAKY earnings.</p>
+          <p className="text-foreground/70">Connect your wallet to access your Rewards Dashboard and claim your AURA earnings.</p>
         </div>
       </div>
     );
@@ -208,15 +208,15 @@ export function Rewards() {
         </div>
         
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-          {/* STAKY Balance Display */}
+          {/* AURA Balance Display */}
           <div className="flex items-center gap-3 px-5 py-2.5 rounded-xl bg-surface-elevated border border-surface-elevated shadow-[0_0_15px_rgba(234,179,8,0.1)]">
             <div className="w-8 h-8 rounded-full bg-electric/20 flex items-center justify-center text-electric">
               <Coins className="w-4 h-4" />
             </div>
             <div>
-              <p className="text-[10px] text-foreground/50 font-bold uppercase tracking-wider">Your STAKY Balance</p>
+              <p className="text-[10px] text-foreground/50 font-bold uppercase tracking-wider">Your AURA Balance</p>
               <p className="text-lg font-extrabold text-white">
-                {stakyBalance.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 4 })} <span className="text-cyan text-xs">STAKY</span>
+                {stakyBalance.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 4 })} <span className="text-cyan text-xs">AURA</span>
               </p>
             </div>
           </div>
@@ -234,7 +234,7 @@ export function Rewards() {
       {isTxSuccess && (
         <div className="mb-8 p-4 rounded-xl bg-green-500/10 border border-green-500/20 flex items-center gap-3 text-green-400">
           <CheckCircle2 className="w-6 h-6 shrink-0" />
-          <p className="font-bold">Rewards claimed successfully! Your STAKY balance has been updated.</p>
+          <p className="font-bold">Rewards claimed successfully! Your AURA balance has been updated.</p>
         </div>
       )}
 
@@ -260,7 +260,7 @@ export function Rewards() {
             ) : (
               <>
                 {Number(formatEther(totalPendingRewards)).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 6 })}
-                <span className="text-lg text-cyan font-bold ml-2">STAKY</span>
+                <span className="text-lg text-cyan font-bold ml-2">AURA</span>
               </>
             )}
           </div>
@@ -277,7 +277,7 @@ export function Rewards() {
             {isLoading ? <span className="animate-pulse bg-surface h-8 w-32 rounded inline-block" /> : 
               <>
                 {Number(formatEther(globalTotalClaimed)).toLocaleString(undefined, { maximumFractionDigits: 2 })}
-                <span className="text-sm text-foreground/50 font-bold ml-2">STAKY</span>
+                <span className="text-sm text-foreground/50 font-bold ml-2">AURA</span>
               </>
             }
           </div>
@@ -294,7 +294,7 @@ export function Rewards() {
             {isLoading ? <span className="animate-pulse bg-surface h-8 w-32 rounded inline-block" /> : 
               <>
                 {Number(formatEther(availablePoolBalance)).toLocaleString(undefined, { maximumFractionDigits: 2 })}
-                <span className="text-sm text-foreground/50 font-bold ml-2">STAKY</span>
+                <span className="text-sm text-foreground/50 font-bold ml-2">AURA</span>
               </>
             }
           </div>
@@ -317,7 +317,7 @@ export function Rewards() {
           <div className="flex flex-col items-center justify-center py-20 text-foreground/50 border border-surface-elevated rounded-2xl bg-surface-elevated/30">
             <Star className="w-12 h-12 mb-4 text-surface-elevated" />
             <p className="text-lg">No active staking positions found.</p>
-            <p className="text-sm">Stake your NFTs to start earning STAKY rewards.</p>
+            <p className="text-sm">Stake your NFTs to start earning AURA rewards.</p>
           </div>
         ) : (
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -346,7 +346,7 @@ export function Rewards() {
                   <div className="mb-6">
                     <span className="text-xs text-foreground/50 block mb-1">Live Pending Rewards</span>
                     <div className="text-3xl font-extrabold text-white">
-                      {Number(formatEther(pos.pendingRewards)).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 6 })} <span className="text-lg text-cyan font-bold">STAKY</span>
+                      {Number(formatEther(pos.pendingRewards)).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 6 })} <span className="text-lg text-cyan font-bold">AURA</span>
                     </div>
                   </div>
                 </div>

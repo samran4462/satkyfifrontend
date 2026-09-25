@@ -189,7 +189,7 @@ export function UnstakeModal({ isOpen, onClose, positions, lockDuration, penalty
                 
                 <div className="flex justify-between items-center text-sm">
                   <span className="text-foreground/70">Total Pending Rewards</span>
-                  <span className="font-bold text-white">{Number(formatEther(totalPendingRewards)).toLocaleString(undefined, { maximumFractionDigits: 6 })} STAKY</span>
+                  <span className="font-bold text-white">{Number(formatEther(totalPendingRewards)).toLocaleString(undefined, { maximumFractionDigits: 6 })} AURA</span>
                 </div>
                 
                 {isAnyLocked && (
@@ -200,14 +200,14 @@ export function UnstakeModal({ isOpen, onClose, positions, lockDuration, penalty
                     </div>
                     <div className="flex justify-between items-center text-sm">
                       <span className="text-foreground/70">Penalty Deduction</span>
-                      <span className="font-bold text-red-400">-{Number(formatEther(estimatedPenalty)).toLocaleString(undefined, { maximumFractionDigits: 6 })} STAKY</span>
+                      <span className="font-bold text-red-400">-{Number(formatEther(estimatedPenalty)).toLocaleString(undefined, { maximumFractionDigits: 6 })} AURA</span>
                     </div>
                   </>
                 )}
                 
                 <div className="pt-3 mt-3 border-t border-surface-elevated flex justify-between items-center">
                   <span className="text-sm font-bold text-white">Net Rewards to Receive</span>
-                  <span className="text-lg font-extrabold text-cyan">{Number(formatEther(netRewards)).toLocaleString(undefined, { maximumFractionDigits: 6 })} STAKY</span>
+                  <span className="text-lg font-extrabold text-cyan">{Number(formatEther(netRewards)).toLocaleString(undefined, { maximumFractionDigits: 6 })} AURA</span>
                 </div>
               </div>
 

@@ -25,7 +25,7 @@ export function Home() {
           </h1>
           
           <p className="text-lg md:text-xl text-foreground/70 max-w-2xl mx-auto">
-            Stake your exclusive digital assets to earn high-yield STAKY rewards. Featuring time-based loyalty multipliers, secure architecture, and zero compromise on safety.
+            Stake your exclusive digital assets to earn high-yield AURA rewards. Featuring time-based loyalty multipliers, secure architecture, and zero compromise on safety.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">

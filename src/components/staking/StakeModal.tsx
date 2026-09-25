@@ -153,7 +153,7 @@ export function StakeModal({ isOpen, onClose, balances }: StakeModalProps) {
                 <CheckCircle2 className="w-8 h-8" />
               </div>
               <h3 className="text-xl font-bold text-white">Staking Successful!</h3>
-              <p className="text-foreground/70">Your NFTs have been successfully staked in batch and are now earning STAKY rewards.</p>
+              <p className="text-foreground/70">Your NFTs have been successfully staked in batch and are now earning AURA rewards.</p>
               <button 
                 onClick={onClose}
                 className="mt-4 w-full px-4 py-3 rounded-xl bg-surface-elevated text-white font-medium hover:bg-navy transition-colors border border-surface"

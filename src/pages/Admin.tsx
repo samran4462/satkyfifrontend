@@ -255,7 +255,7 @@ export function Admin() {
                         <input type="number" className="w-full bg-surface border border-surface-elevated rounded-lg px-4 py-2 text-white" value={inputs.tokenId || ''} onChange={e => setInputs({...inputs, tokenId: e.target.value})} placeholder="e.g. 1" />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-foreground/70 mb-1">Reward Rate (STAKY/sec)</label>
+                        <label className="block text-sm font-medium text-foreground/70 mb-1">Reward Rate (AURA/sec)</label>
                         <input type="text" className="w-full bg-surface border border-surface-elevated rounded-lg px-4 py-2 text-white" value={inputs.rate || ''} onChange={e => setInputs({...inputs, rate: e.target.value})} placeholder="e.g. 0.05" />
                       </div>
                     </>

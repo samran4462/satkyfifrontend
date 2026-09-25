@@ -207,7 +207,7 @@ export function MyStaking() {
             ) : (
               <>
                 {Number(formatEther(totalPendingRewards)).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 6 })}
-                <span className="text-lg text-cyan/80 font-bold mb-1">STAKY</span>
+                <span className="text-lg text-cyan/80 font-bold mb-1">AURA</span>
               </>
             )}
           </p>
@@ -283,7 +283,7 @@ export function MyStaking() {
                   <div>
                     <span className="text-xs text-foreground/50 block mb-1">Live Pending Rewards</span>
                     <div className="text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-electric to-cyan">
-                      {Number(formatEther(pos.pendingRewards)).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 6 })} STAKY
+                      {Number(formatEther(pos.pendingRewards)).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 6 })} AURA
                     </div>
                   </div>
                   

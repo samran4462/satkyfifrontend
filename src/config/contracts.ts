@@ -2,9 +2,9 @@ import NFTContractArtifact from './abis/NFTContract.json';
 import NFTStakingArtifact from './abis/NFTStaking.json';
 
 // Sepolia Testnet — Deployed 2026-09-17
-export const NFT_CONTRACT_ADDRESS = '0x616D4398d8a317411a9BfB29Ad77BBD5d94D863d';
-export const NFT_STAKING_ADDRESS = '0x308817A59f881c1B94ab4a6284521C0018bD3e50';
-export const REWARD_TOKEN_ADDRESS = '0xe74773D89650346293e09f607A8cCfcD2f4c4eab';
+export const NFT_CONTRACT_ADDRESS = '0x0672637D709c44995bAB288FeF384eA745BFCC1E';
+export const NFT_STAKING_ADDRESS = '0xbC096fff28cd00ab93419c4883Ff72A0fA699EDF';
+export const REWARD_TOKEN_ADDRESS = '0x77D4Dd6149733845B0559f09fa798e07215d760C';
 
 export const NFT_CONTRACT_ABI = NFTContractArtifact.abi;
 export const NFT_STAKING_ABI = NFTStakingArtifact.abi;

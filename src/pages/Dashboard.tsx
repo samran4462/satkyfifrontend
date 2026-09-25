@@ -5,10 +5,10 @@ import { StakeModal } from '../components/staking/StakeModal';
 import { NFT_CONTRACT_ADDRESS, NFT_CONTRACT_ABI } from '../config/contracts';
 
 const TIERS = [
-  { id: 1, name: 'Tier 1 (Bronze)', rate: '10 STAKY/day' },
-  { id: 2, name: 'Tier 2 (Silver)', rate: '25 STAKY/day' },
-  { id: 3, name: 'Tier 3 (Gold)', rate: '50 STAKY/day' },
-  { id: 4, name: 'Tier 4 (Platinum)', rate: '100 STAKY/day' }
+  { id: 1, name: 'Tier 1 (Bronze)', rate: '10 AURA/day' },
+  { id: 2, name: 'Tier 2 (Silver)', rate: '25 AURA/day' },
+  { id: 3, name: 'Tier 3 (Gold)', rate: '50 AURA/day' },
+  { id: 4, name: 'Tier 4 (Platinum)', rate: '100 AURA/day' }
 ];
 
 export function Dashboard() {

@@ -6,7 +6,7 @@ import NFTStaking721Artifact from '../config/abis/NFTStaking721.json';
 
 const STAKING_721_ADDRESS = '0x1aa145d9D5AfBf38a6D328F43F40665a2392D107' as `0x${string}`;
 const ELN_NFT_ADDRESS     = '0xCe56eceA6BBda665255a6E5f497168F22E131cFF' as `0x${string}`;
-const STAKY_TOKEN_ADDRESS = '0xe74773D89650346293e09f607A8cCfcD2f4c4eab' as `0x${string}`;
+const AURA_TOKEN_ADDRESS = '0x77D4Dd6149733845B0559f09fa798e07215d760C' as `0x${string}`;
 const STAKING_721_ABI     = NFTStaking721Artifact.abi;
 
 const ERC20_ABI = [
@@ -98,7 +98,7 @@ function StakedNFTCard({ pos, handleClaim, handleUnstake, isTxPending, nftName }
         <div className="flex justify-between">
           <span className="text-foreground/60">Pending Rewards</span>
           <span className="text-cyan font-bold">
-            {Number(formatEther(pos.pendingRewards)).toFixed(4)} STAKY
+            {Number(formatEther(pos.pendingRewards)).toFixed(4)} AURA
           </span>
         </div>
       </div>
@@ -135,9 +135,9 @@ export function Staking721() {
   const nftBalance = Number((nftData?.[1]?.result as bigint) ?? 0n);
   const isApproved = !!(nftData?.[2]?.result as boolean);
 
-  // ── User's STAKY Balance ────────────────────────────────────────────────
+  // ── User's AURA Balance ────────────────────────────────────────────────
   const { data: stakyData, refetch: refetchStaky } = useReadContract({
-    address: STAKY_TOKEN_ADDRESS,
+    address: AURA_TOKEN_ADDRESS,
     abi: ERC20_ABI,
     functionName: 'balanceOf',
     args: [address as `0x${string}`],
@@ -213,19 +213,19 @@ export function Staking721() {
           </div>
           <div>
             <h1 className="text-3xl font-extrabold text-white">ERC-721 Staking</h1>
-            <p className="text-foreground/70 mt-1">Stake your <span className="text-cyan font-bold">{nftName}</span> NFTs and earn STAKY rewards</p>
+            <p className="text-foreground/70 mt-1">Stake your <span className="text-cyan font-bold">{nftName}</span> NFTs and earn AURA rewards</p>
           </div>
         </div>
 
-        {/* STAKY Balance Display */}
+        {/* AURA Balance Display */}
         <div className="flex items-center gap-3 px-5 py-3 rounded-xl bg-surface-elevated border border-surface-elevated shadow-[0_0_15px_rgba(234,179,8,0.1)]">
           <div className="w-10 h-10 rounded-full bg-electric/20 flex items-center justify-center text-electric">
             <Coins className="w-5 h-5" />
           </div>
           <div>
-            <p className="text-xs text-foreground/50 font-bold uppercase tracking-wider">Your STAKY Balance</p>
+            <p className="text-xs text-foreground/50 font-bold uppercase tracking-wider">Your AURA Balance</p>
             <p className="text-xl font-extrabold text-white">
-              {stakyBalance.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 4 })} <span className="text-cyan text-sm">STAKY</span>
+              {stakyBalance.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 4 })} <span className="text-cyan text-sm">AURA</span>
             </p>
           </div>
         </div>
@@ -294,7 +294,7 @@ export function Staking721() {
             {/* Info */}
             <div className="mt-6 p-4 rounded-xl bg-surface border border-surface-elevated text-xs text-foreground/50 space-y-1">
               <p>📋 Collection: <span className="text-cyan font-mono">{ELN_NFT_ADDRESS.slice(0,8)}...</span></p>
-              <p>💰 Reward Rate: <span className="text-cyan">10 STAKY / NFT / day</span></p>
+              <p>💰 Reward Rate: <span className="text-cyan">10 AURA / NFT / day</span></p>
               <p>🔓 No lock period — unstake anytime</p>
             </div>
           </div>
