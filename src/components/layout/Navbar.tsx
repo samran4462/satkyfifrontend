@@ -22,7 +22,6 @@ export function Navbar() {
             <Link to="/mint" className="text-foreground/80 hover:text-cyan transition-colors">Mint Tiers</Link>
             <Link to="/mystaking" className="text-foreground/80 hover:text-cyan transition-colors">My Staking</Link>
             <Link to="/rewards" className="text-foreground/80 hover:text-cyan transition-colors">Rewards</Link>
-            <Link to="/staking721" className="text-foreground/80 hover:text-cyan transition-colors">ERC-721 Staking</Link>
             <Link to="/admin" className="text-foreground/80 hover:text-cyan transition-colors">Admin</Link>
           </nav>
 

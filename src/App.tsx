@@ -5,7 +5,6 @@ import { Dashboard } from './pages/Dashboard';
 import { MyStaking } from './pages/MyStaking';
 import { Rewards } from './pages/Rewards';
 import { Admin } from './pages/Admin';
-import { Staking721 } from './pages/Staking721';
 import { Mint1155 } from './pages/Mint1155';
 
 function App() {
@@ -17,7 +16,6 @@ function App() {
         <Route path="/mystaking" element={<MyStaking />} />
         <Route path="/rewards" element={<Rewards />} />
         <Route path="/admin" element={<Admin />} />
-        <Route path="/staking721" element={<Staking721 />} />
         <Route path="/mint" element={<Mint1155 />} />
       </Routes>
     </Layout>
